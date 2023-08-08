@@ -9,4 +9,11 @@
     ],
     'installable': True,
     'application': True,
+
+       'demo': [],
+    'images': [
+      'static/description/images',
+      'static/description/images/icon.png',
+ ],
+
 }
