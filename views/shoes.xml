@@ -1,0 +1,32 @@
+ <odoo>
+    <data>
+       <record id="view_shoe_search" model="ir.ui.view">
+    <field name="name">shoe.search</field>
+    <field name="model">shoe.product</field>
+    <field name="arch" type="xml">
+        <search string="Shoes">
+            <field name="name"/>
+            <field name="brand"/>
+            <field name="price"/>
+            <separator/>
+            <filter string="Men's shoes" name="men_shoes" domain="[('gender', '=', 'male')]"/>
+            <filter string="Women's shoes" name="women_shoes" domain="[('gender', '=', 'female')]"/>
+            <filter string="Unisex shoes" name="unisex_shoes" domain="[('gender', '=', 'unisex')]"/>
+            <group expand="1" string="Group By">
+<!--                <filter string="Shoe Products" name="gender" context="{'group_by':'Shoe Products'}"/>-->
+
+                <filter string="Gender" name="gender" context="{'group_by':'gender'}"/>
+                <filter string="Brand" name="brand" context="{'group_by':'brand'}"/>
+                <filter string="Price" name="price" context="{'group_by':'price'}"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+
+    </data>
+</odoo>
+
+
+
+
